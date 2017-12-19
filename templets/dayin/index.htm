@@ -1,0 +1,306 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>{dede:global.cfg_webname/}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Keywords" content="{dede:global.cfg_keywords/}" />
+    <meta name="Description" content="{dede:global.cfg_description/}" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <link href="{dede:global.cfg_basehost/}/dayin/css/bootstrap.css" rel="stylesheet" />
+    <link href="{dede:global.cfg_basehost/}/dayin/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="{dede:global.cfg_basehost/}/dayin/css/style.css" rel="stylesheet" type="text/css" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="{dede:global.cfg_basehost/}/dayin/js/html5shiv.min.js"></script>
+      <script src="{dede:global.cfg_basehost/}/dayin/js/respond.min.js"></script>
+    <![endif]-->
+    <script src="{dede:global.cfg_basehost/}/dayin/js/jquery.min.js"></script>
+</head>
+
+<body class="cbp-spmenu-push">
+
+    {dede:include filename='head.htm'/}
+
+    <div class="container-fluid">
+        <div class="row">
+            <div id="slides" class="slides">
+                <a href="javascript:void(0);" class="imglist">
+                    <img src="{dede:global.cfg_basehost/}/dayin/images/o_dc8053424ef748c6b9cdb63fac47840a.jpg" />
+                </a>
+                <a href="javascript:void(0);" class="imglist">
+                    <img src="{dede:global.cfg_basehost/}/dayin/images/o_018f27b095594790be9e067db19249a4.jpg" />
+                </a>
+                <a href="javascript:void(0);" class="imglist">
+                    <img src="{dede:global.cfg_basehost/}/dayin/images/o_afdf264117664570b542aad10fd5a0ab.jpg" />
+                </a>
+            </div>
+        </div>
+        <script src="{dede:global.cfg_basehost/}/dayin/js/jquery.slides.js"></script>
+        <script>
+            $(function () {
+                $("#slides").slidesjs({
+                    width: 720,
+                    height: 300,
+                    start: 1,//控制从第几张图开始播放
+                    //控制前后按钮
+                    navigation: {
+                        active: true,//是否开启左右按钮
+                        effect: "fade"//触发按钮时，焦点图切换的特效，可选参数"slide"和"fade"
+                    }
+                });
+            });
+        </script>
+    </div>
+
+    <div class="container">
+        <div class="space-20"></div>
+        <div class="row articleList">
+        	{dede:arclist row='3' typeid='2' orderby='pubdate' titlelen='50'}
+            <div class="col-md-4">
+                <a href="[field:arcurl/]" title="[field:fulltitle/]" class="NewsList">
+                    <img src="[field:picname/]" alt="[field:fulltitle/]" />
+                    <span>[field:title/]</span>
+                    <font>[field:description/]</font>
+                </a>
+            </div>
+            {/dede:arclist}
+        </div>
+    </div>
+
+    <div class="container bg_color">
+        <div class="space-20"></div>
+        <div class="TitleB">
+            <div class="b_title"><span>服务项目</span></div>
+            <a title="服务项目" href="/fwxm/">更多>></a>
+        </div>
+        <div class="space-40"></div>
+        <div class="row">
+        	{dede:arclist row='4' typeid='3' orderby='pubdate' titlelen='50'}
+            <div class="col-xs-6 col-sm-3">
+                <a href="[field:arcurl/]" class="item2" title="[field:fulltitle/]">
+                    <img src="[field:picname/]" alt="[field:fulltitle/]"/>
+                    <span>[field:title/]</span>
+                </a>
+                <div class="space-40"></div>
+            </div>
+            {/dede:arclist}
+        </div>
+        <div class="space-20"></div>
+    </div>
+
+    <div class="container bg_color">
+        <div class="TitleB">
+            <div class="b_title"><span>解决方案</span></div>
+            <a title="解决方案" href="/fangan/">更多>></a>
+        </div>
+        <div class="space-40"></div>
+        <div class="row">
+        	{dede:arclist row='8' typeid='4' orderby='pubdate' titlelen='50'}
+            <div class="col-xs-6 col-md-3">
+                <a href="[field:arcurl/]" title="[field:fulltitle/]" class="item2">
+                    <img src="[field:picname/]" alt="[field:fulltitle/]" />
+                    <span>[field:title/]</span>
+                </a>
+                <div class="space-40"></div>
+            </div>
+            {/dede:arclist}
+        </div>
+        <div class="space-20"></div>
+    </div>
+
+    <div class="container bg_color">
+        <div class="TitleB">
+            <div class="b_title"><span>案例介绍</span></div>
+            <a title="案例介绍" href="/anli/">更多>></a>
+        </div>
+        <div class="space-40"></div>
+        <div class="row proitem">
+        	{dede:arclist row='4' typeid='14' orderby='pubdate' titlelen='50'}
+            <div class="col-xs-6 col-md-3">
+                <a href="[field:arcurl/]" title="[field:fulltitle/]" class="item2">
+                    <img src="[field:picname/]" alt="[field:fulltitle/]" />
+                    <span>[field:title/]</span>
+                </a>
+                <div class="space-40"></div>
+            </div>
+            {/dede:arclist}
+        </div>
+        <div class="space-20"></div>
+    </div>
+
+    <div class="container bg_color">
+        <div class="TitleB2">
+            <div class="b_title"><span>合作企业</span></div>
+            <!--<a title="合作企业" href="link.html">更多>></a>--> 
+        </div>
+        <div class="space-40"></div>
+        <div class="row proitem">
+            <div class="col-xs-3 col-md-2">
+                <a href="javascript:void(0);" title="德力西电器" target="_blank" class="item4">
+                    <img src="{dede:global.cfg_basehost/}/dayin/images/o_c9d99a1952d24a1ab9b472890455a714.jpg" alt="德力西电器" />
+                </a>
+                <div class="space-40"></div>
+            </div>
+            <div class="col-xs-3 col-md-2">
+                <a href="javascript:void(0);" title="博世" target="_blank" class="item4">
+                    <img src="{dede:global.cfg_basehost/}/dayin/images/o_8d81b5c5cb64468bb82fc5836b833d43.jpg" alt="博世" />
+                </a>
+                <div class="space-40"></div>
+            </div>
+            <div class="col-xs-3 col-md-2">
+                <a href="javascript:void(0);" title="海尔" target="_blank" class="item4">
+                    <img src="{dede:global.cfg_basehost/}/dayin/images/o_328f2631dfbc4b1bb01eb9e8ad0bafba.jpg" alt="海尔" />
+                </a>
+                <div class="space-40"></div>
+            </div>
+            <div class="col-xs-3 col-md-2">
+                <a href="javascript:void(0);" title="中国万向" target="_blank" class="item4">
+                    <img src="{dede:global.cfg_basehost/}/dayin/images/o_2f096d402bf34649902d48387b84a588.jpg" alt="中国万向" />
+                </a>
+                <div class="space-40"></div>
+            </div>
+            <div class="col-xs-3 col-md-2">
+                <a href="javascript:void(0);" title="众泰汽车" target="_blank" class="item4">
+                    <img src="{dede:global.cfg_basehost/}/dayin/images/o_1bbf6d3b80934342a099bf933bd80076.jpg" alt="众泰汽车" />
+                </a>
+                <div class="space-40"></div>
+            </div>
+            <div class="col-xs-3 col-md-2">
+                <a href="javascript:void(0);" title="美的" target="_blank" class="item4">
+                    <img src="{dede:global.cfg_basehost/}/dayin/images/o_56e9165c3280475b9402829dd8eeb146.jpg" alt="美的" />
+                </a>
+                <div class="space-40"></div>
+            </div>
+            <div class="col-xs-3 col-md-2">
+                <a href="javascript:void(0);" title="老板厨房电器" target="_blank" class="item4">
+                    <img src="{dede:global.cfg_basehost/}/dayin/images/o_f75042a57cf842a7bc2fd3643f628f62.jpg" alt="老板厨房电器" />
+                </a>
+                <div class="space-40"></div>
+            </div>
+            <div class="col-xs-3 col-md-2">
+                <a href="javascript:void(0);" title="AUTODESK" target="_blank" class="item4">
+                    <img src="{dede:global.cfg_basehost/}/dayin/images/o_2227fcedc0db41bd950ad8c7cfd8c624.jpg" alt="AUTODESK" />
+                </a>
+                <div class="space-40"></div>
+            </div>
+            <div class="col-xs-3 col-md-2">
+                <a href="javascript:void(0);" title="中国南车" target="_blank" class="item4">
+                    <img src="{dede:global.cfg_basehost/}/dayin/images/o_43c481e43db64ff48243a32122f960ed.jpg" alt="中国南车" />
+                </a>
+                <div class="space-40"></div>
+            </div>
+            <div class="col-xs-3 col-md-2">
+                <a href="javascript:void(0);" title="奇瑞汽车" target="_blank" class="item4">
+                    <img src="{dede:global.cfg_basehost/}/dayin/images/o_a09b584ba97f41fb90a32601d85ab78f.jpg" alt="奇瑞汽车" />
+                </a>
+                <div class="space-40"></div>
+            </div>
+            <div class="col-xs-3 col-md-2">
+                <a href="javascript:void(0);" title="九阳" target="_blank" class="item4">
+                    <img src="{dede:global.cfg_basehost/}/dayin/images/o_ea7791e9a27c41649106c9d39d1c96b2.jpg" alt="九阳" />
+                </a>
+                <div class="space-40"></div>
+            </div>
+            <div class="col-xs-3 col-md-2">
+                <a href="javascript:void(0);" title="苏泊尔" target="_blank" class="item4">
+                    <img src="{dede:global.cfg_basehost/}/dayin/images/o_ac00e02ad4f544669bbf9a047d2db52c.jpg" alt="苏泊尔" />
+                </a>
+                <div class="space-40"></div>
+            </div>
+            <div class="col-xs-3 col-md-2">
+                <a href="javascript:void(0);" title="海康威视" target="_blank" class="item4">
+                    <img src="{dede:global.cfg_basehost/}/dayin/images/o_aed383402285456581b9449c49a5f6df.jpg" alt="海康威视" />
+                </a>
+                <div class="space-40"></div>
+            </div>
+            <div class="col-xs-3 col-md-2">
+                <a href="javascript:void(0);" title="中国美术学院" target="_blank" class="item4">
+                    <img src="{dede:global.cfg_basehost/}/dayin/images/o_174ecbb4615e467f9bfbff96b649d89e.jpg" alt="中国美术学院" />
+                </a>
+                <div class="space-40"></div>
+            </div>
+            <div class="col-xs-3 col-md-2">
+                <a href="javascript:void(0);" title="哇哈哈" target="_blank" class="item4">
+                    <img src="{dede:global.cfg_basehost/}/dayin/images/o_29a56ba9f2ea40f3be4a87e1e6ae8f73.jpg" alt="哇哈哈" />
+                </a>
+                <div class="space-40"></div>
+            </div>
+            <div class="col-xs-3 col-md-2">
+                <a href="javascript:void(0);" title="Lufthansa" target="_blank" class="item4">
+                    <img src="{dede:global.cfg_basehost/}/dayin/images/o_aaded41f8e7d49f5bca98c5803884cd2.jpg" alt="Lufthansa" />
+                </a>
+                <div class="space-40"></div>
+            </div>
+            <div class="col-xs-3 col-md-2">
+                <a href="javascript:void(0);" title="Panasonic" target="_blank" class="item4">
+                    <img src="{dede:global.cfg_basehost/}/dayin/images/o_a9d8eb2e854245978a68aa881ef95dbb.jpg" alt="Panasonic" />
+                </a>
+                <div class="space-40"></div>
+            </div>
+            <div class="col-xs-3 col-md-2">
+                <a href="javascript:void(0);" title="intel" target="_blank" class="item4">
+                    <img src="{dede:global.cfg_basehost/}/dayin/images/o_f3d5025e03904871a1df5c302cfe0c23.jpg" alt="intel" />
+                </a>
+                <div class="space-40"></div>
+            </div>
+        </div>
+        <div class="space-20"></div>
+    </div>
+
+    <!--右侧悬浮开始-->
+    <div id="f_right">
+        <div id="kf_list">
+            <div class="f_right_top"><span>在线咨询</span><i id="closebtn" class="fa fa-times"></i></div>
+            <div class="f_right_ul">
+                <div class="ul_list">
+                    <p>投诉电话：<br /><b>13588888888</b></p>
+                    <img src="{dede:global.cfg_basehost/}/dayin/images/o_386191a2e08c47639b84c290fa998c55.jpg" width="120" />
+                    <p>关注微信公众号</p>
+                </div>
+            </div>
+            <div class="f_right_bot"></div>
+        </div>
+        <div id="r_btn">联系我们</div>
+    </div>
+    <!--右侧悬浮结束-->
+    <script type="text/javascript">
+        //右侧悬浮客服
+        window.onload = window.onresize = window.onscroll = function () {
+            var oBox = document.getElementById("f_right");
+            var oMenu = document.getElementById("kf_list");
+            var iScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            setTimeout(function () {
+                clearInterval(oBox.timer);
+                var iTop = parseInt((document.documentElement.clientHeight - oBox.offsetHeight) / 2) + iScrollTop;
+                oBox.timer = setInterval(function () {
+                    var iSpeed = (iTop - oBox.offsetTop) / 8;
+                    iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+                    oBox.offsetTop == iTop ? clearInterval(oBox.timer) : (oBox.style.top = oBox.offsetTop + iSpeed + "px");
+                }, 30)
+            }, 100)
+        };
+        $(document).ready(function () {
+            $("#closebtn").click(function () {
+                $("#kf_list").hide();
+            });
+            $("#r_btn").click(function () {
+                $("#kf_list").toggle();
+            });
+        });
+
+    </script>
+
+    {dede:include filename='footer.htm'/}
+
+</body>
+
+</html>
